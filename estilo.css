@@ -56,7 +56,7 @@ body {
 }
 
 .caja-community p {
-	color: rgb(194 199 203);
+	color: var(--grayish-blue);
 	line-height: 1.6;
 	padding-top: 10px;
 }
@@ -124,7 +124,7 @@ body {
 }
 
 .caja-whyus ul li {
-	color: #d6d6d6;
+	color: var(--light-gray);
 	line-height: 1.3;
 }
 
