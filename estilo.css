@@ -1,0 +1,180 @@
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+	font-family: 'Karla', sans-serif;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+body {
+	background: rgb(230 239 246);
+}
+
+.flex-contenedor {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor {
+	margin: 20px 0;
+	width: 50%;
+	min-height: 500px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+	border-radius: 10px;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: "community community"
+						 "monthly   whyus";
+}
+
+.caja-community {
+	background: #ffffff;
+	border-radius: 5px 5px 0 0;
+	padding: 10px 10px 40px 40px;
+
+	grid-area: community;
+}
+
+.caja-community h1 {
+	font-size: 24px;
+	color: var(--cyan);
+	padding-top: 10px;
+}
+
+.caja-community h3 {
+	color: var(--bright-yellow);
+	line-height: 1.8;
+}
+
+.caja-community p {
+	color: rgb(194 199 203);
+	line-height: 1.6;
+	padding-top: 10px;
+}
+
+.caja-subscription {
+	background: var(--cyan);
+	border-radius: 0 0 0 5px;
+	padding: 40px 40px 0 40px;
+
+	grid-area: monthly;
+}
+
+.caja-subscription .sign-up {
+	background: var(--bright-yellow);
+	width: 100%;
+	max-width: 500px;
+	height: 50px;
+	margin: 30px auto;
+	border-radius: 5px;
+	border: 2px solid var(--bright-yellow);
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, .4);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.caja-subscription .sign-up:hover {
+	background: transparent;
+}
+
+.numeroyletra {
+	margin-top: 10px;
+
+	display: flex;
+	align-items: center;
+}
+
+.numero {
+	font-size: 35px;
+	line-height: 1.8;
+	padding-right: 10px;
+	font-weight: 700;
+}
+
+.per-month {
+	color: #40d9d4;
+}
+
+.caja-whyus {
+	background: rgb(74 190 189);
+	border-radius: 0 0 5px 0;
+	padding: 17px 30px 30px 50px;
+
+	grid-area: whyus;
+}
+
+.caja-whyus h3 {
+	line-height: 3.5;
+}
+
+.caja-whyus ul {
+	list-style-type: none;
+	margin: 0 0 0 -40px;
+}
+
+.caja-whyus ul li {
+	color: #d6d6d6;
+	line-height: 1.3;
+}
+
+@media screen and (max-width: 900px) {
+	.contenedor {
+		margin: 50px 0;
+		width: 90%;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas: "community"
+							 "monthly"
+							 "whyus";
+	}
+
+	.caja-community {
+		padding: 0 10px 0 20px;
+	}
+
+	.caja-community h1 {
+		font-size: 22px;
+	}
+
+	.caja-community p {
+		padding-bottom: 10px;
+	}
+
+	.caja-subscription {
+		border-radius: 0 0 0 0;
+		padding: 10px 25px 0;
+	}
+
+	.caja-subscription h3 {
+		line-height: .1;
+		padding-top: 10px;
+	}
+
+	.caja-whyus {
+		border-radius: 0 0 10px 10px;
+		padding: 5px 0 20px 25px;
+	}
+
+	.caja-whyus h3 {
+		line-height: 1;
+	}
+
+}
+
+.attribution {
+	font-size: 11px; text-align: center;
+	color: var(--cyan); 
+}
+.attribution a {
+	color: hsl(228, 45%, 44%); 
+}
